@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-family: Arial, sans-serif
+}
+
+ul {
+  padding: 0;
+  margin: 5rem auto;
+  list-style-type: none;
+  border: 10px dotted #9b2226;
+  width: 900px; height: 500px;
+  display: flex;
+  flex-direction: row;
+  /* flex-dire ction: column; */
+  /* flex-direction: row-reverse */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse */
+  /* flex-flow: row wrap; */ /* This is the current styling*/ 
+}
+
+/* set a border and background color to see each LI. Min-width and min-height are not necessarily a good idea in flexbox, but they are needed for the demo to better see the properties work. */
+
+li {
+  border: 2px solid #001219;
+  background-color: #ee9800;
+  /* min-width: 100px; */ /* affects flex-basis*/
+  height: 100px;
+  order: 1;
+  flex-basis: 10%
+}
+
+.flex2 {
+  order: 2;
+  flex-basis: 25% /* total fills the entire parent width*/
+}
