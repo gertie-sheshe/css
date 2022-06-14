@@ -30,7 +30,7 @@ body {
   margin: 0;
 }
 
-section {
+section, header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -81,6 +81,15 @@ figcaption a {
   padding: 16px;
 }
 
+.header-description {
+  display: flex;
+  flex-direction: column;
+}  
+
+.image-container {
+  order: 2;
+}
+
 
 .color2,
 .color2 a:hover {
@@ -121,6 +130,17 @@ figcaption a {
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
 
 
+/* order styles */
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+
 /* At this breakpoint, transition to 2 figures per line */
 
 @media (min-width: 550px) {
@@ -128,6 +148,25 @@ figcaption a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .header-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }  
+
+  header .image-container {
+    flex-basis: 32.5%;
+    order: 0;
+  }
+
+  header img {
+    width: 100%;
+  }
+  
+  header p {
+    flex-basis: 65.5%;
   }
 
   section li {
@@ -145,7 +184,19 @@ figcaption a {
   section h2 {
     margin-left: 100px;
   }
+  header h1 {
+    margin-left: 100px;
+  }
   section li {
     flex-basis: 32.5%
+  }
+
+  header .image-container {
+    flex-basis: 32.5%;
+    /* order: 1; */
+  }
+  
+  header p {
+    flex-basis: 66.5%;
   }
 }
