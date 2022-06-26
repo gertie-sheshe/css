@@ -30,7 +30,7 @@ body {
   margin: 0;
 }
 
-section, header {
+section, header, footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -91,6 +91,7 @@ figcaption a {
 }
 
 
+
 .color2,
 .color2 a:hover {
     border-color: var(--color2);
@@ -127,6 +128,40 @@ figcaption a {
     color: var(--color8);
 }
 
+.footer {
+  background-color: var(--color5);
+}
+
+footer {
+  padding: 3rem;
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer h4 {
+  margin-top: 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer li {
+  margin-right: 1rem;
+}
+
+footer address {
+  font-style: normal;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
 
 
@@ -144,6 +179,15 @@ figcaption a {
 /* At this breakpoint, transition to 2 figures per line */
 
 @media (min-width: 550px) {
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  footer address {
+    margin-top: 0;
+  }
+
   section ul {
     display: flex;
     flex-wrap: wrap;
@@ -172,6 +216,10 @@ figcaption a {
   section li {
     flex-basis: 49.5%
   }
+
+  .social, address {
+    flex-basis: 49.5%
+  }
   figure img {
     object-position: 0
   }
@@ -181,6 +229,7 @@ figcaption a {
 /* At this breakpoint, transition to 3 figures per line */
 
 @media (min-width: 800px) {
+  
   section h2 {
     margin-left: 100px;
   }
@@ -198,5 +247,8 @@ figcaption a {
   
   header p {
     flex-basis: 66.5%;
+  }
+  address {
+    flex-basis: 65.5%;
   }
 }
